@@ -1,0 +1,23 @@
+{
+  "name": "rodin",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "repository": "git@github.com:theqabalist/rodin.git",
+  "author": "Brandon Keown <me@brandonkeown.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/main.js",
+    "postinstall": "pushd src; ln -s ./lib ./node_modules; popd;"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "js-yaml": "^4.1.0",
+    "ramda": "^0.28.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mocha": "^10.1.0"
+  }
+}

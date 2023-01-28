@@ -1,0 +1,188 @@
+{
+    "extends": [
+        "airbnb-base"
+    ],
+    "env": {
+        "mocha": true,
+        "es6": true
+    },
+    "root": true,
+    "rules": {
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "BinaryExpression[operator='in']",
+                "message": "x in y -> y[x] or Boolean(y[x]) or R.has(x, y)"
+            },
+            {
+                "selector": "ForInStatement",
+                "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+            },
+            {
+                "selector": "ForOfStatement",
+                "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
+            },
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            },
+            {
+                "selector": "AwaitExpression",
+                "message": "async/await is not allowed. Prefer plain promises or bluebird coroutine."
+            },
+            {
+                "selector": "FunctionDeclaration[async=true]",
+                "message": "async/await is not allowed. Prefer plain promises or bluebird coroutine."
+            },
+            {
+                "selector": "FunctionExpression[async=true]",
+                "message": "async/await is not allowed. Prefer plain promises or bluebird coroutine."
+            },
+            {
+                "selector": "WhileStatement",
+                "message": "Do not use traditional for-loops/while-loops, use forEach/map/filter/reduce instead."
+            },
+            {
+                "selector": "DoWhileStatement",
+                "message": "Do not use traditional for-loops/while-loops, use forEach/map/filter/reduce instead."
+            },
+            {
+                "selector": "ForStatement",
+                "message": "Do not use traditional for-loops/while-loops, use forEach/map/filter/reduce instead."
+            }
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "no-param-reassign": [
+            "error"
+        ],
+        "no-unused-vars": [
+            "error"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "no-underscore-dangle": [
+            "off"
+        ],
+        "one-var": [
+            "off"
+        ],
+        "one-var-declaration-per-line": [
+            "off"
+        ],
+        "operator-linebreak": [
+            "error",
+            "after"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "global-require": [
+            "off"
+        ],
+        "max-len": [
+            "off"
+        ],
+        "func-names": [
+            "off"
+        ],
+        "no-confusing-arrow": [
+            "off"
+        ],
+        "curly": [
+            "error",
+            "all"
+        ],
+        "brace-style": [
+            "error",
+            "1tbs"
+        ],
+        "no-invalid-this": [
+            "error"
+        ],
+        "no-warning-comments": [
+            "error",
+            {
+                "location": "anywhere"
+            }
+        ],
+        "no-console": [
+            "error"
+        ],
+        "no-constant-condition": [
+            "error"
+        ],
+        "new-cap": [
+            "error"
+        ],
+        "no-restricted-properties": [
+            "off"
+        ],
+        "eqeqeq": [
+            "error",
+            "always"
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectPattern": {
+                    "multiline": true
+                }
+            }
+        ],
+        "no-multi-spaces": [
+            "error",
+            {
+                "ignoreEOLComments": true
+            }
+        ],
+        "consistent-return": [
+            "error",
+            {
+                "treatUndefinedAsUnspecified": false
+            }
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true
+            }
+        ],
+        "class-methods-use-this": 0,
+        "implicit-arrow-linebreak": [
+            "off"
+        ],
+        "prefer-destructuring": [
+            "off"
+        ],
+        "no-extra-parens": [
+            "error"
+        ],
+        "import/no-extraneous-dependencies": [
+            "off"
+        ],
+        "import/no-dynamic-require": [
+            "off"
+        ],
+        "mocha/no-exclusive-tests": [
+            "error"
+        ]
+    },
+    "plugins": [
+        "mocha"
+    ]
+}
