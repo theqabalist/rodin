@@ -180,6 +180,10 @@
         ],
         "mocha/no-exclusive-tests": [
             "error"
+        ],
+        "no-restricted-globals": [
+            "error",
+            "Promise"
         ]
     },
     "plugins": [

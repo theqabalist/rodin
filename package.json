@@ -6,11 +6,13 @@
   "author": "Brandon Keown <me@brandonkeown.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/main.js",
-    "postinstall": "pushd src; ln -s ./lib ./node_modules; popd;"
+    "start": "DB_PATH=./db node src/main.js",
+    "postinstall": "scripts/postinstall.sh",
+    "lint": "yarn eslint src"
   },
   "dependencies": {
     "bluebird": "^3.7.2",
+    "config": "^3.3.9",
     "js-yaml": "^4.1.0",
     "ramda": "^0.28.0"
   },
